@@ -1,0 +1,104 @@
+.infoDiv {
+    width:400px;    
+    border-radius: 5px;
+    background-color: darkkhaki;
+}
+.infoDiv1 {
+    width:400px;    
+    border-radius: 5px;
+    background-color: darkgoldenrod;
+}
+.infoDiv2 {
+    width:400px;    
+    border-radius: 5px;
+    background-color: whitesmoke;
+}
+
+.wrap {
+    padding: 10px;              
+    word-wrap: break-word;
+}
+.container {
+    position: absolute;
+    top: 5%;
+    bottom: 0;
+    left: 1%;
+    right: 0;
+    margin: auto;
+}
+.infoSection {
+    position: absolute;
+    margin-left: 420px; 
+    top: 5px;   
+}
+.infoSection1 {
+    position: absolute;
+    margin-left: 420px; 
+    top: 120px;
+}
+.infoSection2 {
+    position: absolute;
+    margin-left: 420px; 
+    top: 235px;
+}
+.btn {
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    color: black;
+    font-size: 16px;
+    border: 5px solid;              
+}
+.btn:hover {
+    background-color : lightgrey;
+
+}  
+.btn:click {
+    border: 1px solid #e7e7e7;
+}          
+.zroBtn {
+    width: 200px;
+}
+.screen {                             
+    border: 5px;
+    color: grey;
+    width:400px;
+    height: 150px;
+    background-color: black;
+    opacity: 0.5;                   
+}
+.outputScreen {
+    width: 350px; 
+    height: 150px; 
+    text-align: right; 
+    float: right;
+    font-size: 300%;   
+    line-height: 90%;        
+}
+.opScreen {
+    width: 50px;
+    height: 150px; 
+    text-align: center;    
+    float: left;   
+    font-size: 200%;        
+}            
+.overflow {
+    background-color: red;
+    color: black;
+}
+
+.transformable {
+    -webkit-transition: height 100ms linear;
+    -moz-transition: height 100ms linear;
+    -o-transition: height 100ms linear;
+    -ms-transition: height 100ms linear;
+    transition: height 100ms linear;
+}
+
+.small {
+    height:100px;
+}
+
+.big {
+    height:770px;
+}
