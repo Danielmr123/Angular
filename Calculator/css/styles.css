@@ -1,0 +1,67 @@
+
+
+.infoDiv {
+    width:409px;
+    box-shadow: 3px 3px 5px #888888;
+    border-radius: 5px;
+    background-color: darkkhaki;
+}
+
+.wrap {
+    padding: 10px;              
+    word-wrap: break-word;
+}
+.container {
+    position: absolute;
+    top: 5%;
+    bottom: 0;
+    left: 5%;
+    right: 0;
+    margin: auto;
+}
+.btn {
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    color: black;
+    font-size: 16px;
+    border: 1px solid #e7e7e7;                
+}
+.btn:hover {
+    background-color : lightgrey;
+
+}  
+.btn:click {
+    border: 1px solid #e7e7e7;
+}          
+.zroBtn {
+    width: 204px;
+}
+.screen {                             
+    border: 2px solid grey;
+    color: grey;
+    width:409px;
+    height: 100px;
+                    
+}
+.outputScreen {
+    width: 359px; 
+    height: 100px; 
+    text-align: right; 
+    float: right;
+    font-size: 300%;   
+    line-height: 90%;    
+}
+.opScreen {
+    width: 46px;
+    height: 100px; 
+    text-align: center;    
+    float: left;   
+    font-size: 200%; 
+    
+}            
+.overflow {
+    background-color: red;
+    color: black;
+}
+

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html ng-app="calculator">
+    <head>        
+        <meta name ="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CALCULATOR ANGULAR</title>
+        <script src="js/angular.min.js"></script>          
+        <link rel = "stylesheet" href = "css/bootstrap.min.css">    
+        <link rel = "stylesheet" href = "css/styles.css">      
+    </head>
+    <body ng-app="app">           
+        <div ng-controller="ctrl as c" class="container">
+            <div class="screen" ng-class="{'overflow': output > 99999999999}"> <!-- why angular.isNumber(output)  or isFinite(output)? arent working??-->
+                <div class="opScreen" ng-model="operation">{{operation}}</div>
+                <div class="outputScreen wrap" ng-model="output" >{{output | limitTo:numLimit}}</div>                          
+            </div>
+            
+            <div>
+                <button ng-click="keyOperationPress('c')" class="btn">c</button>
+                <button ng-click="keyOperationPress('neg')"  class="btn">+/-</button>
+                <button ng-click="keyOperationPress('SQRT')" class="btn">SQRT</button>
+                <button ng-click="keyOperationPress('/')" class="btn">/</button>
+                <br/>
+                <button ng-click="keyNumPress(7)" class="btn">7</button>
+                <button ng-click="keyNumPress(8)" class="btn">8</button>
+                <button ng-click="keyNumPress(9)" class="btn">9</button>
+                <button ng-click="keyOperationPress('x')" class="btn">x</button>
+                <br/>
+                <button ng-click="keyNumPress(4)" class="btn">4</button>
+                <button ng-click="keyNumPress(5)" class="btn">5</button>
+                <button ng-click="keyNumPress(6)" class="btn">6</button>
+                <button ng-click="keyOperationPress('-')"  class="btn">-</button>
+                <br/>
+                <button ng-click="keyNumPress(1)" class="btn">1</button>
+                <button ng-click="keyNumPress(2)" class="btn">2</button>
+                <button ng-click="keyNumPress(3)" class="btn">3</button>
+                <button ng-click="keyOperationPress('+')" class="btn">+</button>
+                <br/>
+                <button ng-click="keyNumPress(0)" class="btn zroBtn">0</button>
+                <button ng-click="keyNumPress('.')" class="btn">.</button>
+                <button ng-click="keyOperationPress('=')" class="btn">=</button>    
+            </div>
+
+            <div class="infoDiv">
+                <p style="font-weight: bold;" class="wrap">ACTION HISTORY</p>
+                <p class="wrap" ng-model="historyStr">{{historyStr}}</p>
+            </div>
+
+            <div class="infoDiv">
+                <p style="font-weight: bold;" class="wrap">NUMBER OF ACTIONS</p>
+                <p class="wrap" ng-model="actionsCounter">{{actionsCounter}}</p>
+            </div>
+
+        </div> 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src = "js/bootstrap.min.js"></script>
+        <script src="js/app.js"></script>      
+    </body>
+</html>
