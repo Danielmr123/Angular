@@ -1,4 +1,4 @@
-angular.module("calculator").controller('calc-controller', function($scope){
+angular.module("calculator").controller('calc-controller', function($scope, mathService){
     var isDotSelected = false;
     var digitsAfterDot = 10;
     var isNumAfterOp = false;
@@ -66,46 +66,25 @@ angular.module("calculator").controller('calc-controller', function($scope){
     $scope.determineOpAndExecute = function(op){
         switch($scope.operation) {
             case '+':                        
-                $scope.output = $scope.add(firstNum, secondNum);
+                $scope.output = mathService.add(firstNum, secondNum);
                 break;
             case '-':                        
-                $scope.output = $scope.substract(firstNum, secondNum);
+                $scope.output = mathService.substract(firstNum, secondNum);
                 break;
             case 'x':                        
-                $scope.output = $scope.multiply(firstNum, secondNum);
+                $scope.output = mathService.multiply(firstNum, secondNum);
                 break;
             case '/':                        
-                $scope.output = $scope.divide(firstNum, secondNum);
+                $scope.output = mathService.divide(firstNum, secondNum);
                 break;
             case 'neg':                        
-                $scope.output = $scope.neg(secondNum);
+                $scope.output = mathService.neg(secondNum);
                 break;
             case 'SQRT':                        
-                $scope.output = $scope.sqrt(secondNum);
+                $scope.output = mathService.sqrt(secondNum);
                 break;                                    
         }        
-    }
-    $scope.add = function(num1, num2){        
-        return num1 + num2;
-    };
-    $scope.substract = function(num1, num2){        
-        return num1 - num2;
-    };
-    $scope.multiply = function(num1, num2){        
-        return num1 * num2;
-    };
-    $scope.divide = function(num1, num2){        
-        if(num2 != 0){
-            return num1 / num2;
-        }        
-        return 0;
-    };
-    $scope.neg = function(num){
-        return num * -1;
-    };
-    $scope.sqrt = function(num){
-        return Math.sqrt(num);
-    }
+    }    
     $scope.reset = function(){
         $scope.output = 0;        
         firstNum = "";
